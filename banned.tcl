@@ -181,7 +181,7 @@ proc ::banned::banned { nick uhost handle chan arg } {
     set count 0
     set line ""
     foreach ip $ips {
-        set count [incr $count]
+        incr count
         set line [format "%-15.15s %s" $ip $line]
         if {[expr $count % 4] == 0} {
             reply $chan $line
